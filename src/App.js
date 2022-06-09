@@ -6,8 +6,8 @@ import './App.css'
 
 const App = () => (
   <Switch>
-    <Route path="/" component={Home} />
-    <Route path="team-matches" component={TeamMatches} />
+    <Route exact path="/" component={Home} />
+    <Route path="/ipl/:id" component={TeamMatches} />
     <Route component={NotFound} />
   </Switch>
 )

@@ -1,1 +1,40 @@
-/* Write your CSS here */
+.team-matches-container {
+  font-family: 'Bree Serif';
+  background-image: linear-gradient(#a4261d, #1e293b);
+  padding: 45px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .team-matches-container {
+    padding: 100px 50px;
+  }
+}
+@media (min-width: 768px) {
+  .team-matches-content-container {
+    width: 800px;
+  }
+}
+
+.team-matches-description {
+  color: #fff;
+  align-self: flex-start;
+}
+@media (min-width: 768px) {
+  .team-matches-description {
+    font-size: 24px;
+  }
+}
+
+.team-banner-image {
+  width: 100%;
+}
+
+.team-matches-match-cards-container {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

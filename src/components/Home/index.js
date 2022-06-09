@@ -11,10 +11,8 @@ class Home extends Component {
   }
 
   getTeamsList = async () => {
-    const response = await fetch('https://apis.ccbp.in/ipl').then(res =>
-      res.json(),
-    )
-    // console.log(response.teams)
+    const initialResponse = await fetch('https://apis.ccbp.in/ipl')
+    const response = await initialResponse.json()
     this.setState({
       teamsList: response.teams,
       isLoading: false,
@@ -37,7 +35,7 @@ class Home extends Component {
         <div className="team-cards-container">
           {!isLoading ? (
             teamsList.map(eachTeam => (
-              <TeamCard teamDetails={eachTeam} key={teamsList.id} />
+              <TeamCard teamDetails={eachTeam} key={eachTeam.id} />
             ))
           ) : (
             <Loader />

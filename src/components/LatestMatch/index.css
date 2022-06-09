@@ -1,1 +1,80 @@
-/* Write your CSS here */
+.latest-match-container {
+  background-color: #0f172a;
+  padding: 16px;
+  border-radius: 10px;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .latest-match-container {
+    display: flex;
+  }
+}
+.latest-match-header-details-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .latest-match-header-details-container {
+    width: 62%;
+  }
+}
+
+.latest-match-header-details-text-container {
+  width: 70%;
+}
+@media (min-width: 768px) {
+  .latest-match-header-details-text-container {
+    width: 65%;
+  }
+}
+
+.latest-match-team-name {
+  font-size: 20px;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .latest-match-team-name {
+    font-size: 35px;
+  }
+}
+.latest-match-date {
+  font-size: 20px;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .latest-match-date {
+    font-size: 26px;
+  }
+}
+.latest-match-competing-team-logo {
+  width: 50px;
+}
+@media (min-width: 768px) {
+  .latest-match-competing-team-logo {
+    width: 190px;
+  }
+}
+.h-line {
+  border: none;
+  background-color: #4f5db0;
+  height: 1px;
+}
+@media (min-width: 768px) {
+  .latest-match-details-scores {
+    text-align: right;
+  }
+}
+@media (min-width: 768px) {
+  .latest-match-detail-name {
+    font-size: 18px;
+  }
+}
+.latest-match-detail-value {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .latest-match-detail-value {
+    font-size: 16px;
+  }
+}

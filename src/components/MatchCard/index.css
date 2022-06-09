@@ -1,1 +1,65 @@
-/* Write your CSS here */
+.match-card-details-container {
+  width: 47%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  background-color: #0f172a;
+  padding: 20px 16px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .match-card-details-container {
+    width: 31%;
+    margin-bottom: 24px;
+  }
+}
+.match-card-team-logo {
+  width: 45px;
+  height: 45px;
+}
+@media (min-width: 768px) {
+  .match-card-team-logo {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+.match-card-team-name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .match-card-team-name {
+    font-size: 24px;
+  }
+}
+.match-card-result {
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .match-card-result {
+    font-size: 16px;
+  }
+}
+.match-card-status-loss {
+  color: #e31a1a;
+}
+@media (min-width: 768px) {
+  .match-card-status-loss {
+    font-size: 24px;
+  }
+}
+.match-card-status-won {
+  color: #18ed66;
+}
+@media (min-width: 768px) {
+  .match-card-status-won {
+    font-size: 24px;
+  }
+}
