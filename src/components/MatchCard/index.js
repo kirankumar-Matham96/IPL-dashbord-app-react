@@ -23,12 +23,12 @@ const MatchCard = props => {
     <li className="match-card-details-container">
       <img
         src={updatedMatchDetails.competingTeamLogo}
-        alt="team"
+        alt={`competing team ${updatedMatchDetails.competingTeam}`}
         className="match-card-team-logo"
       />
-      <h1 className="match-card-team-name">
+      <p className="match-card-team-name">
         {updatedMatchDetails.competingTeam}
-      </h1>
+      </p>
       <p className="match-card-result">{updatedMatchDetails.result}</p>
       <p className={className}>{updatedMatchDetails.matchStatus}</p>
     </li>

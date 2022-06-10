@@ -32,15 +32,17 @@ class Home extends Component {
           />
           <h1 className="main-heading">IPL DashBoard</h1>
         </div>
-        <div className="team-cards-container">
+        <ul className="team-cards-container">
           {!isLoading ? (
             teamsList.map(eachTeam => (
               <TeamCard teamDetails={eachTeam} key={eachTeam.id} />
             ))
           ) : (
-            <Loader />
+            <div testid="loader">
+              <Loader type="Oval" color="#ffffff" height={50} width={50} />
+            </div>
           )}
-        </div>
+        </ul>
       </div>
     )
   }

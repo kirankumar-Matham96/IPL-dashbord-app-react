@@ -30,6 +30,42 @@ class TeamMatches extends Component {
     })
   }
 
+  getBackGroundGradientClass = () => {
+    const {match} = this.props
+    const {params} = match
+    const {id} = params
+    let tamBGGradientClass = ''
+    switch (id) {
+      case 'RCB':
+        tamBGGradientClass = 'team-matches-container bg-gradient-rcb'
+        break
+      case 'KKR':
+        tamBGGradientClass = 'team-matches-container bg-gradient-kkr'
+        break
+      case 'KXP':
+        tamBGGradientClass = 'team-matches-container bg-gradient-kxp'
+        break
+      case 'CSK':
+        tamBGGradientClass = 'team-matches-container bg-gradient-csk'
+        break
+      case 'RR':
+        tamBGGradientClass = 'team-matches-container bg-gradient-rr'
+        break
+      case 'MI':
+        tamBGGradientClass = 'team-matches-container bg-gradient-mi'
+        break
+      case 'SH':
+        tamBGGradientClass = 'team-matches-container bg-gradient-sh'
+        break
+      case 'DC':
+        tamBGGradientClass = 'team-matches-container bg-gradient-dc'
+        break
+      default:
+        tamBGGradientClass = 'team-matches-container'
+    }
+    return tamBGGradientClass
+  }
+
   render() {
     const {
       latestMatchDetails,
@@ -38,15 +74,19 @@ class TeamMatches extends Component {
       isLoading,
     } = this.state
 
+    const bgContainerGradientClassName = this.getBackGroundGradientClass()
+
     return (
-      <div className="team-matches-container">
+      <div className={bgContainerGradientClassName}>
         {isLoading ? (
-          <Loader />
+          <div testid="loader">
+            <Loader type="Oval" color="#ffffff" height={50} width={50} />
+          </div>
         ) : (
           <div className="team-matches-content-container">
             <img
               src={teamBannerUrl}
-              alt="banner"
+              alt="team banner"
               className="team-banner-image"
             />
             <p className="team-matches-description">Latest Matches</p>
